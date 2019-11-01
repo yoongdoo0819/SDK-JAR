@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="commavenjava:jar15">
+    <output-path>$PROJECT_DIR$/out/artifacts/commavenjava_jar15</output-path>
+    <root id="archive" name="commavenjava.jar">
+      <element id="module-output" name="commavenjava" />
+    </root>
+  </artifact>
+</component>
