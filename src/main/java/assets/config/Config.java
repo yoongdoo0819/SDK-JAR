@@ -6,13 +6,13 @@ import java.io.File;
 
 public class Config {
 
-	public static final String ORG_MSP = "Org1MSP";
+	public static String ORG_MSP = "Org1MSP";
 
-	public static final String ORG = "org1";
+	public static String ORG = "org1";
 
-	public static final String ADMIN = "admin";
+	public static String ADMIN = "admin";
 
-	public static final String ADMIN_PASSWORD = "adminpw";
+	public static String ADMIN_PASSWORD = "adminpw";
 
 	public static String CHANNEL_CONFIG_PATH; // = "config/channel.tx";
 

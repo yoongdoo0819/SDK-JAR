@@ -2,11 +2,54 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="commavenjava:jar18" />
+      <artifact name="commavenjava:jar" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a46bd325-4b32-4ff1-8af2-f68e9de0e186" name="Default Changelist" comment="" />
+    <list default="true" id="a46bd325-4b32-4ff1-8af2-f68e9de0e186" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/commavenjava_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/commavenjava_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/commavenjava_jar10.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/commavenjava_jar11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/commavenjava_jar12.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/commavenjava_jar13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/commavenjava_jar14.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/commavenjava_jar15.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/commavenjava_jar16.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/commavenjava_jar17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/commavenjava_jar18.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/commavenjava_jar2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/commavenjava_jar3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/commavenjava_jar4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/commavenjava_jar5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/commavenjava_jar6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/commavenjava_jar7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/commavenjava_jar8.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/commavenjava_jar9.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/commavenjava_jar18/commavenjava.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/assets/chaincode/ERC721/ERC721.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/assets/chaincode/ERC721/ERC721.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/assets/chaincode/abc.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/assets/config/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/assets/config/Config.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/assets/model/Sig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/assets/model/User_Doc.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/assets/model/User_Sig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/assets/network/CreateChannel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/assets/network/DeployInstantiateChaincode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assets/chaincode/ERC721/ERC721.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/assets/chaincode/ERC721/ERC721.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assets/chaincode/InvokeChaincode.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/assets/chaincode/InvokeChaincode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assets/chaincode/QueryChaincode.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/assets/chaincode/QueryChaincode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assets/chaincode/abc.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assets/config/Config.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/assets/config/Config.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assets/model/Sig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assets/model/User_Doc.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assets/model/User_Sig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assets/network/CreateChannel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assets/network/DeployInstantiateChaincode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assets/user/RegisterEnrollUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/assets/user/RegisterEnrollUser.class" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,11 +63,16 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1SubbmwRqd9aze6fGZlpeeoeMem" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../untitled" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -57,34 +105,43 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JAR Application.commavenjava.jar">
-    <configuration name="commavenjava.jar (1)" type="JarApplication" temporary="true">
-      <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/commavenjava_jar14/commavenjava.jar" />
-      <method v="2" />
+  <component name="RunManager" selected="JAR Application.commavenjava.jar (2)">
+    <configuration name="ERC721" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="assets.chaincode.ERC721.ERC721" />
+      <module name="commavenjava" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="assets.chaincode.ERC721.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="commavenjava.jar (2)" type="JarApplication" temporary="true">
-      <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/commavenjava_jar15/commavenjava.jar" />
+      <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/commavenjava_jar/commavenjava.jar" />
       <method v="2" />
     </configuration>
     <configuration name="commavenjava.jar (3)" type="JarApplication" temporary="true">
-      <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/commavenjava_jar16/commavenjava.jar" />
+      <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/commavenjava_jar2/commavenjava.jar" />
       <method v="2" />
     </configuration>
     <configuration name="commavenjava.jar (4)" type="JarApplication" temporary="true">
-      <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/commavenjava_jar17/commavenjava.jar" />
+      <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/commavenjava_jar4/commavenjava.jar" />
       <method v="2" />
     </configuration>
     <configuration name="commavenjava.jar" type="JarApplication" temporary="true">
-      <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/commavenjava_jar18/commavenjava.jar" />
+      <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/commavenjava_jar3/commavenjava.jar" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JAR Application.commavenjava.jar" />
-        <item itemvalue="JAR Application.commavenjava.jar (4)" />
-        <item itemvalue="JAR Application.commavenjava.jar (3)" />
         <item itemvalue="JAR Application.commavenjava.jar (2)" />
-        <item itemvalue="JAR Application.commavenjava.jar (1)" />
+        <item itemvalue="JAR Application.commavenjava.jar (4)" />
+        <item itemvalue="JAR Application.commavenjava.jar" />
+        <item itemvalue="Application.ERC721" />
+        <item itemvalue="JAR Application.commavenjava.jar (3)" />
       </list>
     </recent_temporary>
   </component>
@@ -105,11 +162,25 @@
       <workItem from="1572543529903" duration="788000" />
       <workItem from="1572544671597" duration="2699000" />
       <workItem from="1572547389260" duration="1478000" />
-      <workItem from="1572569167097" duration="4991000" />
+      <workItem from="1572569167097" duration="9687000" />
+      <workItem from="1572875627374" duration="4971000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
