@@ -6,43 +6,43 @@ import java.io.File;
 
 public class Config {
 
-	public static String ORG_MSP = "Org1MSP";
+	public static String ORG_MSP; // = "Org1MSP";
 
-	public static String ORG = "org1";
+	public static String ORG; // = "org1";
 
-	public static String ADMIN = "admin";
+	public static String ADMIN; // = "admin";
 
-	public static String ADMIN_PASSWORD = "adminpw";
+	public static String ADMIN_PASSWORD; // = "adminpw";
 
 	public static String CHANNEL_CONFIG_PATH; // = "config/channel.tx";
 
-	public static String ORG1_USR_BASE_PATH = "crypto-config" + File.separator + "peerOrganizations" + File.separator
-			 + "org1.example.com" + File.separator + "users" + File.separator + "Admin@org1.example.com"
-			 + File.separator + "msp";
+//	public static String ORG1_USR_BASE_PATH = "crypto-config" + File.separator + "peerOrganizations" + File.separator
+//			 + "org1.example.com" + File.separator + "users" + File.separator + "Admin@org1.example.com"
+//			 + File.separator + "msp";
 
-	public static String ORG2_USR_BASE_PATH = "crypto-config" + File.separator + "peerOrganizations" + File.separator
-			+ "org2.example.com" + File.separator + "users" + File.separator + "Admin@org2.example.com"
-			+ File.separator + "msp";
+//	public static String ORG2_USR_BASE_PATH = "crypto-config" + File.separator + "peerOrganizations" + File.separator
+//			+ "org2.example.com" + File.separator + "users" + File.separator + "Admin@org2.example.com"
+//			+ File.separator + "msp";
 
 	public static String ORG1_USR_ADMIN_PK; // = ORG1_USR_BASE_PATH + File.separator + "keystore";
 	public static String ORG1_USR_ADMIN_CERT; // = ORG1_USR_BASE_PATH + File.separator + "admincerts";
 
-	public static String ORG2_USR_ADMIN_PK = ORG2_USR_BASE_PATH + File.separator + "keystore";
-	public static String ORG2_USR_ADMIN_CERT = ORG2_USR_BASE_PATH + File.separator + "admincerts";
+	public static String ORG2_USR_ADMIN_PK; // = ORG2_USR_BASE_PATH + File.separator + "keystore";
+	public static String ORG2_USR_ADMIN_CERT; // = ORG2_USR_BASE_PATH + File.separator + "admincerts";
 
-	public static String CA_ORG_URL = "http://localhost:7054";
+	public static String CA_ORG_URL; // = "http://localhost:7054";
 
 	//public static String CA_ORG2_URL = "http://localhost:8054";
 
-	public static String ORDERER_URL = "grpc://localhost:7050";
+	public static String ORDERER_URL; // = "grpc://localhost:7050";
 
-	public static String ORDERER_NAME = "orderer.example.com";
+	public static String ORDERER_NAME; // = "orderer.example.com";
 
-	public static String CHANNEL_NAME = "mychannel";
+	public static String CHANNEL_NAME; // = "mychannel";
 
-	public static String ORG_PEER = "peer0.org1.example.com";
+	public static String ORG_PEER; // = "peer0.org1.example.com";
 
-	public static String ORG_PEER_URL = "grpc://localhost:7051";
+	public static String ORG_PEER_URL; // = "grpc://localhost:7051";
 
 	//public static String ORG1_PEER_1 = "peer1.org1.example.com";
 
@@ -58,13 +58,13 @@ public class Config {
 
 	public static String CHAINCODE_ROOT_DIR = "chaincode";
 
-	public static String CHAINCODE_NAME = "mycc";
+	public static String CHAINCODE_NAME; // = "mycc";
 
 	public static String CHAINCODE_PATH; // = "chaincode";
 
 	public static String CHAINCODE_VERSION; // = "1.0";
 
-	public static Type CHAIN_CODE_LANG = Type.JAVA;
+	public static Type CHAIN_CODE_LANG; // = Type.JAVA;
 
 
 	/*
