@@ -2,114 +2,148 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="com.maven.java:jar" />
+      <artifact name="SDK-JAR:jar3" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a46bd325-4b32-4ff1-8af2-f68e9de0e186" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/com_maven_java_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/commavenjava_jar.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/SDK_JAR_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/SDK_JAR_jar2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/com_maven_java_jar.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/commavenjava_jar/commavenjava.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/assets/chaincode/EERC721/EERC721.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/assets/chaincode/EERC721/EERC721.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/assets/chaincode/ERC721/ERC721.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/assets/chaincode/ERC721/ERC721.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/com_maven_java_jar/com.maven.java.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/assets/chaincode/EERC721/EERC721.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/assets/chaincode/ERC721/ERC721.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/assets/chaincode/EnrollmentUser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/assets/chaincode/InvokeChaincode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/assets/chaincode/QueryChaincode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/assets/client/CAClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/assets/client/CAClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/assets/client/ChannelClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/assets/client/ChannelClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/assets/client/FabricClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/assets/client/FabricClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/assets/config/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/assets/config/Config.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/assets/model/RedisConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/assets/model/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/assets/model/UserConnectLog.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/assets/model/vo/AccessToken.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/assets/repository/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/assets/service/RedisService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/assets/service/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/assets/user/CAEnrollment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/assets/user/RegisterEnrollUser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/assets/util/Util.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/commavenjava.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/assets/chaincode/EERC721/EERC721.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/assets/chaincode/EERC721/EERC721.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/assets/chaincode/ERC721/ERC721.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/assets/chaincode/ERC721/ERC721.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/assets/config/Config.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/assets/config/Config.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/com.maven.java-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/com.maven.java-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/animal-sniffer-annotations-1.17.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/lib/animal-sniffer-annotations-1.17.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/apache-log4j-extras-1.2.17.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/lib/apache-log4j-extras-1.2.17.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/bcpkix-jdk15on-1.60.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/lib/bcpkix-jdk15on-1.60.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/bcprov-jdk15on-1.60.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/lib/bcprov-jdk15on-1.60.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/checker-compat-qual-2.5.2.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/lib/checker-compat-qual-2.5.2.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/commons-cli-1.4.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/lib/commons-cli-1.4.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/commons-codec-1.10.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/lib/commons-codec-1.10.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/commons-compress-1.18.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/lib/commons-compress-1.18.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/commons-io-2.6.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/lib/commons-io-2.6.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/commons-logging-1.2.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/lib/commons-logging-1.2.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/commons-math3-3.6.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/lib/commons-math3-3.6.1.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/commons-pool2-2.4.3.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/lib/commons-pool2-2.4.3.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/error_prone_annotations-2.2.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/lib/error_prone_annotations-2.2.0.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/fabric-gateway-java-1.4.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/lib/fabric-gateway-java-1.4.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/fabric-sdk-java-1.4.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/lib/fabric-sdk-java-1.4.1.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/grpc-context-1.17.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/lib/grpc-context-1.17.1.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/grpc-core-1.17.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/lib/grpc-core-1.17.1.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/grpc-netty-1.17.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/lib/grpc-netty-1.17.1.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/grpc-protobuf-1.17.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/lib/grpc-protobuf-1.17.1.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/grpc-protobuf-lite-1.17.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/lib/grpc-protobuf-lite-1.17.1.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/grpc-stub-1.17.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/lib/grpc-stub-1.17.1.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/gson-2.7.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/lib/gson-2.7.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/guava-26.0-android.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/lib/guava-26.0-android.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/httpclient-4.5.6.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/lib/httpclient-4.5.6.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/httpcore-4.4.10.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/lib/httpcore-4.4.10.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/j2objc-annotations-1.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/lib/j2objc-annotations-1.1.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/javax.annotation-api-1.3.2.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/lib/javax.annotation-api-1.3.2.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/javax.json-1.1.4.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/lib/javax.json-1.1.4.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/jedis-2.9.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/lib/jedis-2.9.1.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/jsr305-3.0.2.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/lib/jsr305-3.0.2.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/jul-to-slf4j-1.7.25.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/lib/jul-to-slf4j-1.7.25.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/lettuce-core-5.1.4.RELEASE.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/lib/lettuce-core-5.1.4.RELEASE.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/log4j-1.2.17.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/lib/log4j-1.2.17.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/log4j-api-2.11.2.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/lib/log4j-api-2.11.2.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/log4j-to-slf4j-2.11.2.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/lib/log4j-to-slf4j-2.11.2.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/logback-classic-1.2.3.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/lib/logback-classic-1.2.3.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/logback-core-1.2.3.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/lib/logback-core-1.2.3.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/milagro-crypto-java-0.4.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/lib/milagro-crypto-java-0.4.0.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/netty-buffer-4.1.30.Final.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/lib/netty-buffer-4.1.30.Final.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/netty-buffer-4.1.33.Final.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/lib/netty-buffer-4.1.33.Final.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/netty-codec-4.1.30.Final.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/lib/netty-codec-4.1.30.Final.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/netty-codec-4.1.33.Final.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/lib/netty-codec-4.1.33.Final.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/netty-codec-http-4.1.30.Final.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/lib/netty-codec-http-4.1.30.Final.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/netty-codec-http2-4.1.30.Final.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/lib/netty-codec-http2-4.1.30.Final.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/netty-codec-socks-4.1.30.Final.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/lib/netty-codec-socks-4.1.30.Final.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/netty-common-4.1.30.Final.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/lib/netty-common-4.1.30.Final.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/netty-common-4.1.33.Final.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/lib/netty-common-4.1.33.Final.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/netty-handler-4.1.30.Final.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/lib/netty-handler-4.1.30.Final.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/netty-handler-4.1.33.Final.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/lib/netty-handler-4.1.33.Final.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/netty-handler-proxy-4.1.30.Final.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/lib/netty-handler-proxy-4.1.30.Final.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/netty-resolver-4.1.30.Final.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/lib/netty-resolver-4.1.30.Final.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/netty-resolver-4.1.33.Final.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/lib/netty-resolver-4.1.33.Final.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/netty-tcnative-boringssl-static-2.0.20.Final.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/lib/netty-tcnative-boringssl-static-2.0.20.Final.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/netty-transport-4.1.30.Final.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/lib/netty-transport-4.1.30.Final.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/netty-transport-4.1.33.Final.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/lib/netty-transport-4.1.33.Final.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/opencensus-api-0.17.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/lib/opencensus-api-0.17.0.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/opencensus-contrib-grpc-metrics-0.17.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/lib/opencensus-contrib-grpc-metrics-0.17.0.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/proto-google-common-protos-1.0.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/lib/proto-google-common-protos-1.0.0.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/protobuf-java-3.6.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/lib/protobuf-java-3.6.1.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/protobuf-java-util-3.6.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/lib/protobuf-java-util-3.6.1.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/reactive-streams-1.0.2.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/lib/reactive-streams-1.0.2.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/reactor-core-3.2.6.RELEASE.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/lib/reactor-core-3.2.6.RELEASE.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/slf4j-api-1.7.22.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/lib/slf4j-api-1.7.22.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/snakeyaml-1.23.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/lib/snakeyaml-1.23.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/spring-aop-5.1.5.RELEASE.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/lib/spring-aop-5.1.5.RELEASE.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/spring-beans-5.1.5.RELEASE.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/lib/spring-beans-5.1.5.RELEASE.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/spring-boot-2.1.3.RELEASE.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/lib/spring-boot-2.1.3.RELEASE.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/spring-boot-autoconfigure-2.1.3.RELEASE.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/lib/spring-boot-autoconfigure-2.1.3.RELEASE.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/spring-boot-starter-2.1.3.RELEASE.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/lib/spring-boot-starter-2.1.3.RELEASE.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/spring-boot-starter-data-redis-2.1.3.RELEASE.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/lib/spring-boot-starter-data-redis-2.1.3.RELEASE.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/spring-boot-starter-logging-2.1.3.RELEASE.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/lib/spring-boot-starter-logging-2.1.3.RELEASE.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/spring-context-5.1.5.RELEASE.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/lib/spring-context-5.1.5.RELEASE.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/spring-context-support-5.1.5.RELEASE.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/lib/spring-context-support-5.1.5.RELEASE.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/spring-core-5.1.5.RELEASE.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/lib/spring-core-5.1.5.RELEASE.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/spring-data-commons-2.1.5.RELEASE.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/lib/spring-data-commons-2.1.5.RELEASE.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/spring-data-keyvalue-2.1.5.RELEASE.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/lib/spring-data-keyvalue-2.1.5.RELEASE.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/spring-data-redis-2.1.5.RELEASE.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/lib/spring-data-redis-2.1.5.RELEASE.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/spring-expression-5.1.5.RELEASE.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/lib/spring-expression-5.1.5.RELEASE.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/spring-jcl-5.1.5.RELEASE.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/lib/spring-jcl-5.1.5.RELEASE.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/spring-oxm-5.1.5.RELEASE.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/lib/spring-oxm-5.1.5.RELEASE.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/spring-tx-5.1.5.RELEASE.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/lib/spring-tx-5.1.5.RELEASE.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assets/chaincode/EERC721/EERC721.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assets/chaincode/ERC721/ERC721.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assets/chaincode/EnrollmentUser$1$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assets/chaincode/EnrollmentUser$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assets/chaincode/EnrollmentUser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assets/chaincode/InvokeChaincode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assets/chaincode/QueryChaincode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assets/client/CAClient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assets/client/ChannelClient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assets/client/FabricClient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assets/config/Config.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assets/model/RedisConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assets/model/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assets/model/vo/AccessToken.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assets/repository/UserRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assets/service/RedisService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assets/service/UserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assets/user/CAEnrollment.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assets/user/RegisterEnrollUser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assets/user/UserContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assets/util/Util.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/com.maven.java-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/lib/animal-sniffer-annotations-1.17.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/lib/apache-log4j-extras-1.2.17.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/lib/bcpkix-jdk15on-1.60.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/lib/bcprov-jdk15on-1.60.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/lib/checker-compat-qual-2.5.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/lib/commons-cli-1.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/lib/commons-codec-1.10.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/lib/commons-compress-1.18.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/lib/commons-io-2.6.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/lib/commons-logging-1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/lib/commons-math3-3.6.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/lib/commons-pool2-2.4.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/lib/error_prone_annotations-2.2.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/lib/fabric-gateway-java-1.4.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/lib/fabric-sdk-java-1.4.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/lib/grpc-context-1.17.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/lib/grpc-core-1.17.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/lib/grpc-netty-1.17.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/lib/grpc-protobuf-1.17.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/lib/grpc-protobuf-lite-1.17.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/lib/grpc-stub-1.17.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/lib/gson-2.7.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/lib/guava-26.0-android.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/lib/httpclient-4.5.6.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/lib/httpcore-4.4.10.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/lib/j2objc-annotations-1.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/lib/javax.annotation-api-1.3.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/lib/javax.json-1.1.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/lib/jedis-2.9.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/lib/jsr305-3.0.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/lib/jul-to-slf4j-1.7.25.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/lib/lettuce-core-5.1.4.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/lib/log4j-1.2.17.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/lib/log4j-api-2.11.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/lib/log4j-to-slf4j-2.11.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/lib/logback-classic-1.2.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/lib/logback-core-1.2.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/lib/milagro-crypto-java-0.4.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/lib/netty-buffer-4.1.30.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/lib/netty-buffer-4.1.33.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/lib/netty-codec-4.1.30.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/lib/netty-codec-4.1.33.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/lib/netty-codec-http-4.1.30.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/lib/netty-codec-http2-4.1.30.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/lib/netty-codec-socks-4.1.30.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/lib/netty-common-4.1.30.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/lib/netty-common-4.1.33.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/lib/netty-handler-4.1.30.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/lib/netty-handler-4.1.33.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/lib/netty-handler-proxy-4.1.30.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/lib/netty-resolver-4.1.30.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/lib/netty-resolver-4.1.33.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/lib/netty-tcnative-boringssl-static-2.0.20.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/lib/netty-transport-4.1.30.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/lib/netty-transport-4.1.33.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/lib/opencensus-api-0.17.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/lib/opencensus-contrib-grpc-metrics-0.17.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/lib/proto-google-common-protos-1.0.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/lib/protobuf-java-3.6.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/lib/protobuf-java-util-3.6.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/lib/reactive-streams-1.0.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/lib/reactor-core-3.2.6.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/lib/slf4j-api-1.7.22.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/lib/snakeyaml-1.23.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/lib/spring-aop-5.1.5.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/lib/spring-beans-5.1.5.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/lib/spring-boot-2.1.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/lib/spring-boot-autoconfigure-2.1.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/lib/spring-boot-starter-2.1.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/lib/spring-boot-starter-data-redis-2.1.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/lib/spring-boot-starter-logging-2.1.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/lib/spring-context-5.1.5.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/lib/spring-context-support-5.1.5.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/lib/spring-core-5.1.5.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/lib/spring-data-commons-2.1.5.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/lib/spring-data-keyvalue-2.1.5.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/lib/spring-data-redis-2.1.5.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/lib/spring-expression-5.1.5.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/lib/spring-jcl-5.1.5.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/lib/spring-oxm-5.1.5.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/lib/spring-tx-5.1.5.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -127,11 +161,16 @@
   </component>
   <component name="ProjectId" id="1SubbmwRqd9aze6fGZlpeeoeMem" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/assets" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -152,22 +191,10 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="JAR Application.com.maven.java.jar">
+  <component name="RunManager" selected="JAR Application.SDK-JAR.jar (2)">
     <configuration name="ERC721" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="assets.chaincode.ERC721.ERC721" />
-      <module name="commavenjava" />
+      <module name="SDK-JAR" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="assets.chaincode.ERC721.*" />
@@ -178,31 +205,43 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="com.maven.java.jar" type="JarApplication" temporary="true">
-      <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/com_maven_java_jar/com.maven.java.jar" />
+    <configuration name="SDK-JAR.jar (1)" type="JarApplication" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/SDK_JAR_jar6/SDK-JAR.jar" />
       <method v="2" />
     </configuration>
-    <configuration name="commavenjava.jar (2)" type="JarApplication" temporary="true">
-      <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/commavenjava_jar/commavenjava.jar" />
+    <configuration name="SDK-JAR.jar (2)" type="JarApplication" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/SDK_JAR_jar/SDK-JAR.jar" />
       <method v="2" />
     </configuration>
-    <configuration name="commavenjava.jar (4)" type="JarApplication" temporary="true">
-      <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/commavenjava_jar4/commavenjava.jar" />
+    <configuration name="SDK-JAR.jar (3)" type="JarApplication" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/SDK_JAR_jar2/SDK-JAR.jar" />
       <method v="2" />
     </configuration>
-    <configuration name="commavenjava.jar" type="JarApplication" temporary="true">
-      <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/commavenjava_jar3/commavenjava.jar" />
+    <configuration name="SDK-JAR.jar (4)" type="JarApplication" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/SDK_JAR_jar3/SDK-JAR.jar" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JAR Application.com.maven.java.jar" />
-        <item itemvalue="JAR Application.commavenjava.jar (2)" />
-        <item itemvalue="JAR Application.commavenjava.jar (4)" />
-        <item itemvalue="JAR Application.commavenjava.jar" />
+        <item itemvalue="JAR Application.SDK-JAR.jar (2)" />
+        <item itemvalue="JAR Application.SDK-JAR.jar (4)" />
+        <item itemvalue="JAR Application.SDK-JAR.jar (3)" />
         <item itemvalue="Application.ERC721" />
+        <item itemvalue="JAR Application.SDK-JAR.jar (1)" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -223,7 +262,10 @@
       <workItem from="1572547389260" duration="1478000" />
       <workItem from="1572569167097" duration="9687000" />
       <workItem from="1572875627374" duration="4971000" />
-      <workItem from="1573117221512" duration="2242000" />
+      <workItem from="1573117221512" duration="3288000" />
+      <workItem from="1574316994191" duration="80000" />
+      <workItem from="1575275347704" duration="7973000" />
+      <workItem from="1575368713750" duration="4585000" />
     </task>
     <servers />
   </component>
@@ -242,5 +284,55 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="716" y="285" width="525" height="428" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1575373165214">
+      <screen x="67" y="27" width="1853" height="948" />
+    </state>
+    <state x="716" y="285" width="525" height="428" key="#com.intellij.ide.util.TreeClassChooserDialog/67.27.1853.948@67.27.1853.948" timestamp="1575373165214" />
+    <state x="766" y="257" width="424" height="484" key="FileChooserDialogImpl" timestamp="1575285957138">
+      <screen x="67" y="27" width="1853" height="948" />
+    </state>
+    <state x="766" y="257" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.948@67.27.1853.948" timestamp="1575285957138" />
+    <state width="1807" height="185" key="GridCell.Tab.0.bottom" timestamp="1575373392859">
+      <screen x="67" y="27" width="1853" height="948" />
+    </state>
+    <state width="1807" height="185" key="GridCell.Tab.0.bottom/67.27.1853.948@67.27.1853.948" timestamp="1575373392859" />
+    <state width="1807" height="185" key="GridCell.Tab.0.center" timestamp="1575373392855">
+      <screen x="67" y="27" width="1853" height="948" />
+    </state>
+    <state width="1807" height="185" key="GridCell.Tab.0.center/67.27.1853.948@67.27.1853.948" timestamp="1575373392855" />
+    <state width="1807" height="185" key="GridCell.Tab.0.left" timestamp="1575373392854">
+      <screen x="67" y="27" width="1853" height="948" />
+    </state>
+    <state width="1807" height="185" key="GridCell.Tab.0.left/67.27.1853.948@67.27.1853.948" timestamp="1575373392854" />
+    <state width="1807" height="185" key="GridCell.Tab.0.right" timestamp="1575373392859">
+      <screen x="67" y="27" width="1853" height="948" />
+    </state>
+    <state width="1807" height="185" key="GridCell.Tab.0.right/67.27.1853.948@67.27.1853.948" timestamp="1575373392859" />
+    <state width="1807" height="302" key="GridCell.Tab.1.bottom" timestamp="1575373384846">
+      <screen x="67" y="27" width="1853" height="948" />
+    </state>
+    <state width="1807" height="302" key="GridCell.Tab.1.bottom/67.27.1853.948@67.27.1853.948" timestamp="1575373384846" />
+    <state width="1807" height="302" key="GridCell.Tab.1.center" timestamp="1575373384844">
+      <screen x="67" y="27" width="1853" height="948" />
+    </state>
+    <state width="1807" height="302" key="GridCell.Tab.1.center/67.27.1853.948@67.27.1853.948" timestamp="1575373384844" />
+    <state width="1807" height="302" key="GridCell.Tab.1.left" timestamp="1575373384843">
+      <screen x="67" y="27" width="1853" height="948" />
+    </state>
+    <state width="1807" height="302" key="GridCell.Tab.1.left/67.27.1853.948@67.27.1853.948" timestamp="1575373384843" />
+    <state width="1807" height="302" key="GridCell.Tab.1.right" timestamp="1575373384845">
+      <screen x="67" y="27" width="1853" height="948" />
+    </state>
+    <state width="1807" height="302" key="GridCell.Tab.1.right/67.27.1853.948@67.27.1853.948" timestamp="1575373384845" />
+    <state x="476" y="77" width="1024" height="845" key="SettingsEditor" timestamp="1575373306406">
+      <screen x="67" y="27" width="1853" height="948" />
+    </state>
+    <state x="476" y="77" width="1024" height="845" key="SettingsEditor/67.27.1853.948@67.27.1853.948" timestamp="1575373306406" />
+    <state x="638" y="236" width="710" height="528" key="find.popup" timestamp="1575275766770">
+      <screen x="67" y="27" width="1853" height="948" />
+    </state>
+    <state x="638" y="236" width="710" height="528" key="find.popup/67.27.1853.948@67.27.1853.948" timestamp="1575275766770" />
   </component>
 </project>

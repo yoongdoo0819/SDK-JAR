@@ -1,111 +1,52 @@
 package assets.chaincode.EERC721;
 
-import assets.chaincode.InvokeChaincode;
-import assets.chaincode.QueryChaincode;
-import assets.client.CAClient;
+import assets.chaincode.AddressUtils;
+import assets.chaincode.ERC721.ERC721;
+import assets.config.UserConfig;
 import assets.client.ChannelClient;
 import assets.client.FabricClient;
 import assets.config.Config;
 import assets.user.UserContext;
-import assets.util.Util;
-import assets.service.RedisService;
 import org.hyperledger.fabric.sdk.*;
-//import org.springframework.stereotype.Component;
+import org.hyperledger.fabric.sdk.identity.X509Identity;
 
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import static java.nio.charset.StandardCharsets.UTF_8;
-
 public class EERC721 {
 
-    private static final byte[] EXPECTED_EVENT_DATA = "!".getBytes(UTF_8);
-    private static final String EXPECTED_EVENT_NAME = "event";
 
-    String certificate;
-
-    public String getCertificate() {
-        return certificate;
-    }
-
-    public void setCertificate(String certificate) {
-        this.certificate = certificate;
-    }
-
-    public String mint(String tokenId, String type, String owner, String hash, String signers, String path, String pathHash) {
+    public String register(String tokenId, String type, String owner, int pages, String hash, String signers, String path, String pathHash) {
 
         String result = "";
         try {
 
-            Util.cleanUp();
-            String caUrl = Config.CA_ORG_URL;
-            CAClient caClient = new CAClient(caUrl, null);
+            UserContext userContext = UserConfig.initUserContextForOwner();
+            X509Identity identity = new X509Identity(userContext);
+            String addr = AddressUtils.getMyAddress(identity);
 
-            // Enroll Admin to OrGMSP
-            UserContext adminUserContext = new UserContext();
-            adminUserContext.setName(owner);
-            adminUserContext.setAffiliation(Config.ORG);
-            adminUserContext.setMspId(Config.ORG_MSP);
-            caClient.setAdminUserContext(adminUserContext);
-            adminUserContext = caClient.enrollAdminUser(Config.ADMIN, Config.ADMIN_PASSWORD);
-
-            // Register user
-            UserContext userContext = new UserContext();
-            String name = owner;
-            userContext.setName(name);
-            userContext.setAffiliation(Config.ORG);
-            userContext.setMspId(Config.ORG_MSP);
-
-            userContext = caClient.enrollUser(userContext, certificate);
-
-            FabricClient fabClient = new FabricClient(userContext);
-
-            ChannelClient channelClient = fabClient.createChannelClient(Config.CHANNEL_NAME);
-            Channel channel = channelClient.getChannel();
-
-            // for (int i = 0; i < Config.ORG_PEER; i++) {
-            Peer peer = fabClient.getInstance().newPeer(Config.ORG_PEER, Config.ORG_PEER_URL);
-            channel.addPeer(peer);
-
-            // for (int i = 0; i < Config.ORDERER_NAME.length; i++) {
-            Orderer orderer = fabClient.getInstance().newOrderer(Config.ORDERER_NAME, Config.ORDERER_URL);
-            channel.addOrderer(orderer);
-            //  }
-
-            EventHub eventHub = fabClient.getInstance().newEventHub("eventhub01", "grpc://localhost:7053");
-            channel.addEventHub(eventHub);
-
-            channel.initialize();
+            ChannelClient channelClient = UserConfig.initChannel();
+            FabricClient fabClient = UserConfig.getFabClient();
 
             TransactionProposalRequest request = fabClient.getInstance().newTransactionProposalRequest();
-            ChaincodeID ccid = ChaincodeID.newBuilder().setName(Config.CHAINCODE_NAME).build();
+            ChaincodeID ccid = ChaincodeID.newBuilder().setName(Config.CHAINCODE_1_NAME).build();
             request.setChaincodeID(ccid);
             request.setFcn("mint");
-            String[] arguments = { tokenId, type, owner, hash, signers, path, pathHash};
+            String[] arguments = { tokenId, type, addr, Integer.toString(pages), hash, signers, path, pathHash};
 
             request.setArgs(arguments);
             request.setProposalWaitTime(1000);
 
-            Map<String, byte[]> tm2 = new HashMap<>();
-            tm2.put("HyperLedgerFabric", "TransactionProposalRequest:JavaSDK".getBytes(UTF_8));
-            tm2.put("method", "TransactionProposalRequest".getBytes(UTF_8));
-            tm2.put("result", ":)".getBytes(UTF_8));
-            tm2.put(EXPECTED_EVENT_NAME, EXPECTED_EVENT_DATA);
-            request.setTransientMap(tm2);
             Collection<ProposalResponse> responses = channelClient.sendTransactionProposal(request);
             for (ProposalResponse res: responses) {
                 ChaincodeResponse.Status status = res.getStatus();
-                Logger.getLogger(InvokeChaincode.class.getName()).log(Level.INFO,"mint on "+Config.CHAINCODE_NAME + ". Status - " + status + " result - " + res.getMessage());
+                Logger.getLogger(ERC721.class.getName()).log(Level.INFO,"mint on "+Config.CHAINCODE_1_NAME + ". STATUS - " + status + " Message - " + res.getMessage());
                 result = res.getMessage();
-                //result = (String)res.getStatus();
             }
 
         } catch (Exception e) {
             e.printStackTrace();
-            result = "Failure";
         }
 
         return result;
@@ -115,52 +56,20 @@ public class EERC721 {
 
         String result = "";
         try {
-            Util.cleanUp();
-            String caUrl = Config.CA_ORG_URL;
-            CAClient caClient = new CAClient(caUrl, null);
 
-            // Enroll Admin to OrGMSP
-            UserContext adminUserContext = new UserContext();
-            adminUserContext.setName(owner);
-            adminUserContext.setAffiliation(Config.ORG);
-            adminUserContext.setMspId(Config.ORG_MSP);
-            caClient.setAdminUserContext(adminUserContext);
-            adminUserContext = caClient.enrollAdminUser(Config.ADMIN, Config.ADMIN_PASSWORD);
+            UserContext userContext = UserConfig.initUserContextForOwner();
+            X509Identity identity = new X509Identity(userContext);
+            String addr = AddressUtils.getMyAddress(identity);
 
-            // Register user
-            UserContext userContext = new UserContext();
-            String name = owner;
-            userContext.setName(name);
-            userContext.setAffiliation(Config.ORG);
-            userContext.setMspId(Config.ORG_MSP);
-
-            userContext = caClient.enrollUser(userContext, certificate);
-
-            FabricClient fabClient = new FabricClient(userContext);
-
-            ChannelClient channelClient = fabClient.createChannelClient(Config.CHANNEL_NAME);
-            Channel channel = channelClient.getChannel();
-
-            // for (int i = 0; i < Config.ORG_PEER; i++) {
-            Peer peer = fabClient.getInstance().newPeer(Config.ORG_PEER, Config.ORG_PEER_URL);
-            channel.addPeer(peer);
-
-            // for (int i = 0; i < Config.ORDERER_NAME.length; i++) {
-            Orderer orderer = fabClient.getInstance().newOrderer(Config.ORDERER_NAME, Config.ORDERER_URL);
-            channel.addOrderer(orderer);
-            //  }
-
-            EventHub eventHub = fabClient.getInstance().newEventHub("eventhub01", "grpc://localhost:7053");
-            channel.addEventHub(eventHub);
-            channel.initialize();
+            ChannelClient channelClient = UserConfig.initChannel();
+            FabricClient fabClient = UserConfig.getFabClient();
 
             Thread.sleep(1000);
-            Logger.getLogger(QueryChaincode.class.getName()).log(Level.INFO, "Query token ");
+            Logger.getLogger(EERC721.class.getName()).log(Level.INFO, "Query token ");
 
-            Collection<ProposalResponse> responses1Query = channelClient.queryByChainCode("mycc", "balanceOf", new String[]{owner, type});
+            Collection<ProposalResponse> responses1Query = channelClient.queryByChainCode(Config.CHAINCODE_1_NAME, "balanceOf", new String[]{addr, type});
             for (ProposalResponse pres : responses1Query) {
-                //String stringResponse = new String(pres.getChaincodeActionResponsePayload());
-                Logger.getLogger(QueryChaincode.class.getName()).log(Level.INFO, pres.getMessage());
+                Logger.getLogger(EERC721.class.getName()).log(Level.INFO, pres.getMessage());
                 result = pres.getMessage();
             }
 
@@ -171,69 +80,29 @@ public class EERC721 {
         return result;
     }
 
-    public String deactivate(String tokenId, String owner) {
+    public String deactivate(String tokenId) {
 
         String result = "";
         try {
-            Util.cleanUp();
-            String caUrl = Config.CA_ORG_URL;
-            CAClient caClient = new CAClient(caUrl, null);
 
-            // Enroll Admin to OrGMSP
-            UserContext adminUserContext = new UserContext();
-            adminUserContext.setName(owner);
-            adminUserContext.setAffiliation(Config.ORG);
-            adminUserContext.setMspId(Config.ORG_MSP);
-            caClient.setAdminUserContext(adminUserContext);
-            adminUserContext = caClient.enrollAdminUser(Config.ADMIN, Config.ADMIN_PASSWORD);
+            UserConfig.initUserContextForOwner();
 
-            // Register user
-            UserContext userContext = new UserContext();
-            String name = owner;
-            userContext.setName(name);
-            userContext.setAffiliation(Config.ORG);
-            userContext.setMspId(Config.ORG_MSP);
-
-            userContext = caClient.enrollUser(userContext, certificate);
-
-            FabricClient fabClient = new FabricClient(userContext);
-
-            ChannelClient channelClient = fabClient.createChannelClient(Config.CHANNEL_NAME);
-            Channel channel = channelClient.getChannel();
-
-            // for (int i = 0; i < Config.ORG_PEER; i++) {
-            Peer peer = fabClient.getInstance().newPeer(Config.ORG_PEER, Config.ORG_PEER_URL);
-            channel.addPeer(peer);
-
-            // for (int i = 0; i < Config.ORDERER_NAME.length; i++) {
-            Orderer orderer = fabClient.getInstance().newOrderer(Config.ORDERER_NAME, Config.ORDERER_URL);
-            channel.addOrderer(orderer);
-            //  }
-
-            EventHub eventHub = fabClient.getInstance().newEventHub("eventhub01", "grpc://localhost:7053");
-            channel.addEventHub(eventHub);
-            channel.initialize();
+            ChannelClient channelClient = UserConfig.initChannel();
+            FabricClient fabClient = UserConfig.getFabClient();
 
             TransactionProposalRequest request = fabClient.getInstance().newTransactionProposalRequest();
-            ChaincodeID ccid = ChaincodeID.newBuilder().setName(Config.CHAINCODE_NAME).build();
+            ChaincodeID ccid = ChaincodeID.newBuilder().setName(Config.CHAINCODE_1_NAME).build();
             request.setChaincodeID(ccid);
+            
             request.setFcn("deactivate");
             String[] arguments = { tokenId };
-
             request.setArgs(arguments);
             request.setProposalWaitTime(1000);
 
-            Map<String, byte[]> tm2 = new HashMap<>();
-            tm2.put("HyperLedgerFabric", "TransactionProposalRequest:JavaSDK".getBytes(UTF_8));
-            tm2.put("method", "TransactionProposalRequest".getBytes(UTF_8));
-            tm2.put("result", ":)".getBytes(UTF_8));
-            tm2.put(EXPECTED_EVENT_NAME, EXPECTED_EVENT_DATA);
-            request.setTransientMap(tm2);
             Collection<ProposalResponse> responses = channelClient.sendTransactionProposal(request);
             for (ProposalResponse res: responses) {
                 ChaincodeResponse.Status status = res.getStatus();
-                Logger.getLogger(InvokeChaincode.class.getName()).log(Level.INFO,"deactivated on "+Config.CHAINCODE_NAME + ". Status - " + status);
-
+                Logger.getLogger(ERC721.class.getName()).log(Level.INFO,"deactivated on "+Config.CHAINCODE_1_NAME + ". STATUS - " + status + " Message - " + res.getMessage());
                 result = res.getMessage();
             }
 
@@ -241,73 +110,32 @@ public class EERC721 {
             e.printStackTrace();
         }
 
-        Logger.getLogger(result);
         return result;
     }
 
-    public String divide(String tokenId, String newId, String owner) {
+    public String divide(String tokenId, String[] newIds, String[] values, int index) {
 
         String result = "";
         try {
-            Util.cleanUp();
-            String caUrl = Config.CA_ORG_URL;
-            CAClient caClient = new CAClient(caUrl, null);
 
-            // Enroll Admin to OrGMSP
-            UserContext adminUserContext = new UserContext();
-            adminUserContext.setName(owner);
-            adminUserContext.setAffiliation(Config.ORG);
-            adminUserContext.setMspId(Config.ORG_MSP);
-            caClient.setAdminUserContext(adminUserContext);
-            adminUserContext = caClient.enrollAdminUser(Config.ADMIN, Config.ADMIN_PASSWORD);
+            UserConfig.initUserContextForOwner();
 
-            // Register user
-            UserContext userContext = new UserContext();
-            String name = owner;
-            userContext.setName(name);
-            userContext.setAffiliation(Config.ORG);
-            userContext.setMspId(Config.ORG_MSP);
-
-            userContext = caClient.enrollUser(userContext, certificate);
-
-            FabricClient fabClient = new FabricClient(userContext);
-
-            ChannelClient channelClient = fabClient.createChannelClient(Config.CHANNEL_NAME);
-            Channel channel = channelClient.getChannel();
-
-            // for (int i = 0; i < Config.ORG_PEER; i++) {
-            Peer peer = fabClient.getInstance().newPeer(Config.ORG_PEER, Config.ORG_PEER_URL);
-            channel.addPeer(peer);
-
-            // for (int i = 0; i < Config.ORDERER_NAME.length; i++) {
-            Orderer orderer = fabClient.getInstance().newOrderer(Config.ORDERER_NAME, Config.ORDERER_URL);
-            channel.addOrderer(orderer);
-            //  }
-
-            EventHub eventHub = fabClient.getInstance().newEventHub("eventhub01", "grpc://localhost:7053");
-            channel.addEventHub(eventHub);
-            channel.initialize();
+            ChannelClient channelClient = UserConfig.initChannel();
+            FabricClient fabClient = UserConfig.getFabClient();
 
             TransactionProposalRequest request = fabClient.getInstance().newTransactionProposalRequest();
-            ChaincodeID ccid = ChaincodeID.newBuilder().setName(Config.CHAINCODE_NAME).build();
+            ChaincodeID ccid = ChaincodeID.newBuilder().setName(Config.CHAINCODE_1_NAME).build();
             request.setChaincodeID(ccid);
             request.setFcn("divide");
-            String[] arguments = { tokenId, newId };
-            //request.setFcn("createCar");
-            //String[] arguments = { "CAR1", "Chevy", "Volt", "Red", "Nick" };
+            String[] arguments = { tokenId,  Arrays.toString(newIds), Arrays.toString(values), Integer.toString(index) };
+            
             request.setArgs(arguments);
             request.setProposalWaitTime(1000);
 
-            Map<String, byte[]> tm2 = new HashMap<>();
-            tm2.put("HyperLedgerFabric", "TransactionProposalRequest:JavaSDK".getBytes(UTF_8));
-            tm2.put("method", "TransactionProposalRequest".getBytes(UTF_8));
-            tm2.put("result", ":)".getBytes(UTF_8));
-            tm2.put(EXPECTED_EVENT_NAME, EXPECTED_EVENT_DATA);
-            request.setTransientMap(tm2);
             Collection<ProposalResponse> responses = channelClient.sendTransactionProposal(request);
             for (ProposalResponse res: responses) {
                 ChaincodeResponse.Status status = res.getStatus();
-                Logger.getLogger(InvokeChaincode.class.getName()).log(Level.INFO,"divided on "+Config.CHAINCODE_NAME + ". Status - " + status);
+                Logger.getLogger(ERC721.class.getName()).log(Level.INFO,"divided on "+Config.CHAINCODE_1_NAME + ". STATUS - " + status + " Message - " + res.getMessage());
                 result = res.getMessage();
             }
 
@@ -315,135 +143,58 @@ public class EERC721 {
             e.printStackTrace();
         }
 
-        Logger.getLogger(result);
         return result;
     }
 
-    public String update(String tokenId, String index, String attr, String owner) {
+    public String update(String tokenId, String index, String attr) {
 
         String result = "";
         try {
-            Util.cleanUp();
-            String caUrl = Config.CA_ORG_URL;
-            CAClient caClient = new CAClient(caUrl, null);
 
-            // Enroll Admin to OrGMSP
-            UserContext adminUserContext = new UserContext();
-            adminUserContext.setName(owner);
-            adminUserContext.setAffiliation(Config.ORG);
-            adminUserContext.setMspId(Config.ORG_MSP);
-            caClient.setAdminUserContext(adminUserContext);
-            adminUserContext = caClient.enrollAdminUser(Config.ADMIN, Config.ADMIN_PASSWORD);
+            UserConfig.initUserContextForOwner();
 
-            // Register user
-            UserContext userContext = new UserContext();
-            String name = owner;
-            userContext.setName(name);
-            userContext.setAffiliation(Config.ORG);
-            userContext.setMspId(Config.ORG_MSP);
-
-            userContext = caClient.enrollUser(userContext, certificate);
-
-            FabricClient fabClient = new FabricClient(userContext);
-
-            ChannelClient channelClient = fabClient.createChannelClient(Config.CHANNEL_NAME);
-            Channel channel = channelClient.getChannel();
-
-            // for (int i = 0; i < Config.ORG_PEER; i++) {
-            Peer peer = fabClient.getInstance().newPeer(Config.ORG_PEER, Config.ORG_PEER_URL);
-            channel.addPeer(peer);
-
-            // for (int i = 0; i < Config.ORDERER_NAME.length; i++) {
-            Orderer orderer = fabClient.getInstance().newOrderer(Config.ORDERER_NAME, Config.ORDERER_URL);
-            channel.addOrderer(orderer);
-            //  }
-
-            EventHub eventHub = fabClient.getInstance().newEventHub("eventhub01", "grpc://localhost:7053");
-            channel.addEventHub(eventHub);
-            channel.initialize();
+            ChannelClient channelClient = UserConfig.initChannel();
+            FabricClient fabClient = UserConfig.getFabClient();
 
             TransactionProposalRequest request = fabClient.getInstance().newTransactionProposalRequest();
-            ChaincodeID ccid = ChaincodeID.newBuilder().setName(Config.CHAINCODE_NAME).build();
+            ChaincodeID ccid = ChaincodeID.newBuilder().setName(Config.CHAINCODE_1_NAME).build();
             request.setChaincodeID(ccid);
             request.setFcn("setXAttr");
             String[] arguments = { tokenId, index, attr };
-            //request.setFcn("createCar");
-            //String[] arguments = { "CAR1", "Chevy", "Volt", "Red", "Nick" };
+            
             request.setArgs(arguments);
             request.setProposalWaitTime(1000);
 
-            Map<String, byte[]> tm2 = new HashMap<>();
-            tm2.put("HyperLedgerFabric", "TransactionProposalRequest:JavaSDK".getBytes(UTF_8));
-            tm2.put("method", "TransactionProposalRequest".getBytes(UTF_8));
-            tm2.put("result", ":)".getBytes(UTF_8));
-            tm2.put(EXPECTED_EVENT_NAME, EXPECTED_EVENT_DATA);
-            request.setTransientMap(tm2);
             Collection<ProposalResponse> responses = channelClient.sendTransactionProposal(request);
             for (ProposalResponse res: responses) {
                 ChaincodeResponse.Status status = res.getStatus();
-                Logger.getLogger(InvokeChaincode.class.getName()).log(Level.INFO,"divided on "+Config.CHAINCODE_NAME + ". Status - " + status);
+                Logger.getLogger(ERC721.class.getName()).log(Level.INFO,"update on "+Config.CHAINCODE_1_NAME + ". STATUS - " + status + " Message - " + res.getMessage());
                 result = res.getMessage();
             }
 
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-        Logger.getLogger(result);
+        
         return result;
     }
 
-    public String query(String tokenId, String owner) {
+    public String query(String tokenId) {
 
         String result = "";
         try {
-            Util.cleanUp();
-            String caUrl = Config.CA_ORG_URL;
-            CAClient caClient = new CAClient(caUrl, null);
 
-            // Enroll Admin to OrGMSP
-            UserContext adminUserContext = new UserContext();
-            adminUserContext.setName(owner);
-            adminUserContext.setAffiliation(Config.ORG);
-            adminUserContext.setMspId(Config.ORG_MSP);
-            caClient.setAdminUserContext(adminUserContext);
-            adminUserContext = caClient.enrollAdminUser(Config.ADMIN, Config.ADMIN_PASSWORD);
+            UserConfig.initUserContextForOwner();
 
-            // Register user
-            UserContext userContext = new UserContext();
-            String name = owner;
-            userContext.setName(name);
-            userContext.setAffiliation(Config.ORG);
-            userContext.setMspId(Config.ORG_MSP);
-
-            userContext = caClient.enrollUser(userContext, certificate);
-
-            FabricClient fabClient = new FabricClient(userContext);
-
-            ChannelClient channelClient = fabClient.createChannelClient(Config.CHANNEL_NAME);
-            Channel channel = channelClient.getChannel();
-
-            // for (int i = 0; i < Config.ORG_PEER; i++) {
-            Peer peer = fabClient.getInstance().newPeer(Config.ORG_PEER, Config.ORG_PEER_URL);
-            channel.addPeer(peer);
-
-            // for (int i = 0; i < Config.ORDERER_NAME.length; i++) {
-            Orderer orderer = fabClient.getInstance().newOrderer(Config.ORDERER_NAME, Config.ORDERER_URL);
-            channel.addOrderer(orderer);
-            //  }
-
-            EventHub eventHub = fabClient.getInstance().newEventHub("eventhub01", "grpc://localhost:7053");
-            channel.addEventHub(eventHub);
-            channel.initialize();
+            ChannelClient channelClient = UserConfig.initChannel();
+            FabricClient fabClient = UserConfig.getFabClient();
 
             Thread.sleep(1000);
-            Logger.getLogger(QueryChaincode.class.getName()).log(Level.INFO, "Query token ");
+            Logger.getLogger(EERC721.class.getName()).log(Level.INFO, "Query token ");
 
-            Collection<ProposalResponse> responses1Query = channelClient.queryByChainCode("mycc", "query", new String[]{tokenId});
+            Collection<ProposalResponse> responses1Query = channelClient.queryByChainCode(Config.CHAINCODE_1_NAME, "query", new String[]{tokenId});
             for (ProposalResponse pres : responses1Query) {
-                //String stringResponse2 = new String(pres.getChaincodeActionResponsePayload());
-                Logger.getLogger(QueryChaincode.class.getName()).log(Level.INFO, pres.getMessage());
-
+                Logger.getLogger(EERC721.class.getName()).log(Level.INFO, pres.getMessage());
                 result = pres.getMessage();
             }
 
@@ -451,7 +202,6 @@ public class EERC721 {
             e.printStackTrace();
         }
 
-        Logger.getLogger(result);
         return result;
     }
 
@@ -459,53 +209,15 @@ public class EERC721 {
 
         String result = "";
         try {
-            Util.cleanUp();
-            String caUrl = Config.CA_ORG_URL;
-            CAClient caClient = new CAClient(caUrl, null);
-
-            // Enroll Admin to OrGMSP
-            UserContext adminUserContext = new UserContext();
-            adminUserContext.setName(owner);
-            adminUserContext.setAffiliation(Config.ORG);
-            adminUserContext.setMspId(Config.ORG_MSP);
-            caClient.setAdminUserContext(adminUserContext);
-            adminUserContext = caClient.enrollAdminUser(Config.ADMIN, Config.ADMIN_PASSWORD);
-
-            // Register user
-            UserContext userContext = new UserContext();
-            String name = owner;
-            userContext.setName(name);
-            userContext.setAffiliation(Config.ORG);
-            userContext.setMspId(Config.ORG_MSP);
-
-            userContext = caClient.enrollUser(userContext, certificate);
-
-            FabricClient fabClient = new FabricClient(userContext);
-
-            ChannelClient channelClient = fabClient.createChannelClient(Config.CHANNEL_NAME);
-            Channel channel = channelClient.getChannel();
-
-            // for (int i = 0; i < Config.ORG_PEER; i++) {
-            Peer peer = fabClient.getInstance().newPeer(Config.ORG_PEER, Config.ORG_PEER_URL);
-            channel.addPeer(peer);
-
-            // for (int i = 0; i < Config.ORDERER_NAME.length; i++) {
-            Orderer orderer = fabClient.getInstance().newOrderer(Config.ORDERER_NAME, Config.ORDERER_URL);
-            channel.addOrderer(orderer);
-            //  }
-
-            EventHub eventHub = fabClient.getInstance().newEventHub("eventhub01", "grpc://localhost:7053");
-            channel.addEventHub(eventHub);
-            channel.initialize();
+            ChannelClient channelClient = UserConfig.initChannel();
+            FabricClient fabClient = UserConfig.getFabClient();
 
             Thread.sleep(1000);
-            Logger.getLogger(QueryChaincode.class.getName()).log(Level.INFO, "Query token ");
+            Logger.getLogger(EERC721.class.getName()).log(Level.INFO, "Query token ");
 
-            Collection<ProposalResponse> responses1Query = channelClient.queryByChainCode("mycc", "queryHistory", new String[]{tokenId});
+            Collection<ProposalResponse> responses1Query = channelClient.queryByChainCode(Config.CHAINCODE_1_NAME, "queryHistory", new String[]{tokenId});
             for (ProposalResponse pres : responses1Query) {
-                //String stringResponse2 = new String(pres.getChaincodeActionResponsePayload());
-                Logger.getLogger(QueryChaincode.class.getName()).log(Level.INFO, pres.getMessage());
-
+                Logger.getLogger(EERC721.class.getName()).log(Level.INFO, pres.getMessage());
                 result = pres.getMessage();
             }
 
@@ -513,11 +225,7 @@ public class EERC721 {
             e.printStackTrace();
         }
 
-        Logger.getLogger(result);
         return result;
     }
-
-    public static void main(String args[]) {
-
-    }
+    
 }

@@ -1,8 +1,11 @@
 package assets.chaincode;
 
+import assets.config.Config;
 import org.hyperledger.fabric.gateway.Wallet;
 import org.hyperledger.fabric.gateway.Wallet.Identity;
+import org.hyperledger.fabric.sdk.Enrollment;
 import org.hyperledger.fabric.sdk.User;
+import org.hyperledger.fabric.sdk.identity.X509Identity;
 import org.hyperledger.fabric.sdk.security.CryptoSuite;
 import org.hyperledger.fabric.sdk.security.CryptoSuiteFactory;
 import org.hyperledger.fabric_ca.sdk.EnrollmentRequest;
@@ -16,17 +19,16 @@ import java.util.Set;
 
 public class EnrollmentUser {
 
+    X509Identity identity = null;
     String userID = null;
+
+    AddressUtils addressUtils = new AddressUtils();
+
 
     public void enrollAdmin() throws Exception {
 
-        // Create a CA client for interacting with the CA.
-        Properties props = new Properties();
-        props.put("pemFile",
-                "./fabric-samples/first-network/crypto-config/peerOrganizations/org1.example.com/ca/ca.org1.example.com-cert.pem"/*"/root/fabric-samples/first-network/crypto-config/peerOrganizations/org1.example.com/ca/ca.org1.example.com-cert.pem"*/);
-        props.put("allowAllHostNames", "true");
         // if url starts as https.., need to set SSL
-        HFCAClient caClient = HFCAClient.createNewInstance("http://localhost:7054", props);
+        HFCAClient caClient = HFCAClient.createNewInstance(Config.CA_ORG1_URL, null/*props*/);
         CryptoSuite cryptoSuite = CryptoSuiteFactory.getDefault().getCryptoSuite();
         caClient.setCryptoSuite(cryptoSuite);
 
@@ -48,23 +50,18 @@ public class EnrollmentUser {
         final EnrollmentRequest enrollmentRequestTLS = new EnrollmentRequest();
         enrollmentRequestTLS.addHost("localhost");
         enrollmentRequestTLS.setProfile("tls");
-        org.hyperledger.fabric.sdk.Enrollment enrollment = caClient.enroll("admin", "adminpw", enrollmentRequestTLS);
+        Enrollment enrollment = caClient.enroll(Config.ADMIN, Config.ADMIN_PASSWORD, enrollmentRequestTLS);
         Identity user = Identity.createIdentity("Org1MSP", enrollment.getCert(), enrollment.getKey());
         wallet.put("admin", user);
         System.out.println("Successfully enrolled user \"admin\" and imported it into the wallet");
     }
 
-    public String registerUser(String _userID) throws Exception {
+    public Enrollment registerUser(String _userID) throws Exception {
 
         this.userID = _userID;
 
-        // Create a CA client for interacting with the CA.
-        Properties props = new Properties();
-        props.put("pemFile",
-                "./fabric-samples/first-network/crypto-config/peerOrganizations/org1.example.com/ca/ca.org1.example.com-cert.pem");
-        props.put("allowAllHostNames", "true");
         // if url starts as https.., need to set SSL
-        HFCAClient caClient = HFCAClient.createNewInstance("http://localhost:7054", props);
+        HFCAClient caClient = HFCAClient.createNewInstance(Config.CA_ORG1_URL, null/*props*/);
         CryptoSuite cryptoSuite = CryptoSuiteFactory.getDefault().getCryptoSuite();
         caClient.setCryptoSuite(cryptoSuite);
 
@@ -108,8 +105,8 @@ public class EnrollmentUser {
             }
 
             @Override
-            public org.hyperledger.fabric.sdk.Enrollment getEnrollment() {
-                return new org.hyperledger.fabric.sdk.Enrollment() {
+            public Enrollment getEnrollment() {
+                return new Enrollment() {
 
                     @Override
                     public PrivateKey getKey() {
@@ -127,24 +124,19 @@ public class EnrollmentUser {
             public String getMspId() {
                 return "Org1MSP";
             }
-        }
-                ;
+        };
 
         // Register the user, enroll the user, and import the new identity into the wallet.
         RegistrationRequest registrationRequest = new RegistrationRequest(this.userID);
         registrationRequest.setAffiliation("org1.department1");
         registrationRequest.setEnrollmentID(this.userID);
         String enrollmentSecret = caClient.register(registrationRequest, admin);
-        org.hyperledger.fabric.sdk.Enrollment enrollment = caClient.enroll(this.userID, enrollmentSecret);
+        Enrollment enrollment = caClient.enroll(this.userID, enrollmentSecret);
         Identity user = Identity.createIdentity("Org1MSP", enrollment.getCert(), enrollment.getKey());
-        System.out.println("**********************"+enrollment.getCert()+"**************************");
-        wallet.put(this.userID,user);
+        wallet.put(this.userID, user);
         System.out.println("Successfully enrolled user " + this.userID + " and imported it into the wallet");
 
-        return enrollment.getCert();
+        return enrollment;
     }
 
-    public static void main(String[] args) throws Exception {
-
-    }
 }
