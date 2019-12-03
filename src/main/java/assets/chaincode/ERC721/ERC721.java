@@ -18,8 +18,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class ERC721 {
-
-
+    
     public String register(String tokenId, String owner) {
 
         String result = "";
